@@ -1,0 +1,13 @@
+#Installing Quantmod package 
+install.packages("qunatmod")
+
+# Open Quantmod library
+library(quantmod)
+
+#Calling a company stock using getSymbols("Company Symbol", src= "Source", from="yyyy-mm-dd", to="yyyy-mm-dd")
+getSymbols("GOOGL", src="yahoo", from="2016-01-01", to= Sys.Date())
+View(GOOGL)
+
+#Plotting the data 
+chart_Series(GOOGL)
+chart_Series(GOOGL, type="candlesticks")
